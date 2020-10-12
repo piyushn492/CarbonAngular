@@ -1,0 +1,7 @@
+<button type="button">Edit</button>
+<button type="button" (click)="onSave()">Save</button>
+<ibm-tabs [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
+	<ibm-tab heading="Breakfast"><app-breakfast></app-breakfast></ibm-tab>
+	<ibm-tab heading="Lunch"><app-lunch></app-lunch></ibm-tab>
+	<ibm-tab heading="Dinner"><app-dinner></app-dinner></ibm-tab>
+</ibm-tabs>

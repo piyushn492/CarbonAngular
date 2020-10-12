@@ -1,0 +1,23 @@
+<br><br>
+<form [formGroup]="formGroup">
+    <div>Options</div>
+    <ibm-radio-group aria-label="radiogroup" formControlName="radioGroup"
+        (change)="onChangeRadio($event)">
+        <ibm-radio *ngFor="let radio of manyRadios" [value]="radio.num" [disabled]="radio.disabled">
+            {{radio.num}}
+        </ibm-radio>
+    </ibm-radio-group>
+    <br><br>
+    <div>Quantity</div>
+    <ibm-select formControlName="selecterino" (change)="onChangeSelect($event)">
+        <option value="default" disabled selected hidden>Choose an option</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </ibm-select>
+</form>
+<br><br>
+<ibm-label>
+    Dish Name
+    <input ibmText (change)="onChangeInput($event)">
+</ibm-label>

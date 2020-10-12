@@ -1,0 +1,25 @@
+<table ibmTable [sortable]="false" style="width: 650px;">
+    <thead ibmTableHead>
+        <tr>
+            <th
+                ibmTableHeadCell
+                *ngFor="let column of model.header"
+                [column]="column">
+            </th>
+        </tr>
+    </thead>
+    <tbody ibmTableBody>
+        <tr
+            *ngFor="let row of model.data"
+            ibmTableRow
+            [row]="row">
+            <td
+                *ngFor="let item of row; let j = index"
+                ibmTableData
+                [item]="item"
+                [class]="model.header[j].className"
+                [ngStyle]="model.header[j].style">
+            </td>
+        </tr>
+    </tbody>
+</table>

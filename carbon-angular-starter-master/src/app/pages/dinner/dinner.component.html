@@ -1,0 +1,21 @@
+<br><br>
+<fieldset class="bx--fieldset">
+    <legend class="bx--label">Select toppings to be used in Pizza</legend>
+    <ibm-checkbox [hideLabel]="hideLabel" (change)="onChangeTomato($event)">
+        Tomato
+    </ibm-checkbox>
+    <ibm-checkbox [hideLabel]="hideLabel" (change)="onChangePaneer($event)">
+        Paneer
+    </ibm-checkbox>
+    <ibm-checkbox [hideLabel]="hideLabel" (change)="onChangeChicken($event)">
+        Chicken
+    </ibm-checkbox>
+</fieldset>
+<ibm-table-container>
+    <ibm-table-header>
+        <h4 ibmTableHeaderTitle>{{title}}</h4>
+        <p ibmTableHeaderDescription>{{description}}</p>
+    </ibm-table-header>
+    <app-table [model]="simpleModel">
+    </app-table>
+</ibm-table-container>
